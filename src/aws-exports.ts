@@ -14,4 +14,6 @@ const awsExports = {
     },
 };
 
-export default awsExports;
+export default awsExports;// Example: Use it with Amplify
+Amplify.configure(awsExports);
+

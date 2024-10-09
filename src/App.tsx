@@ -4,14 +4,10 @@ import { generateClient } from "aws-amplify/data";
 import { Authenticator } from '@aws-amplify/ui-react';
 import { FileUploader } from '@aws-amplify/ui-react-storage';
 import '@aws-amplify/ui-react/styles.css';
-import awsmobile from './aws-exports';
-import { Auth, Storage } from 'aws-amplify';
-
 
 
 const client = generateClient<Schema>();
-Auth.configure(awsmobile);
-Storage.configure(awsmobile);
+
 
 function App() {
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
